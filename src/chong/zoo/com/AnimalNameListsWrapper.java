@@ -8,6 +8,8 @@ public class AnimalNameListsWrapper {
     private ArrayList<String> tigerNameList;
     private ArrayList<String> bearNameList;
 
+    //read the file txt and creates the animal name list
+
     public AnimalNameListsWrapper(ArrayList<String> hyenaNameList, ArrayList<String> lionNameList, ArrayList<String> tigerNameList, ArrayList<String> bearNameList) {
         this.hyenaNameList = hyenaNameList;
         this.lionNameList = lionNameList;

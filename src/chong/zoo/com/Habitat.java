@@ -20,18 +20,18 @@ public class Habitat {
     // Display all animals in this habitat neatly
     public void displayAnimals() {
         System.out.println("\nHabitat: " + habitatName);
-        System.out.println("----------------------------------------");
+        System.out.println("=================================================================================");
         for (Animal animal : animals) {
-            System.out.println("| Name: " + animal.getAnimalName() +
-                    " | ID: " + animal.getAnimalID() +
-                    " | Species: " + animal.getClass().getSimpleName() +
-                    " | Age: " + animal.getAge() +
-                    " | Sex: " + animal.getSex() +
-                    " | Color: " + animal.getAnimalColor() +
-                    " | Weight: " + animal.getWeight() + " lbs" +
-                    " | Birthdate: " + animal.getAnimalBirthday() +
-                    " | Origin: " + animal.getAnimalOrigin());
+            System.out.println(" Name: " + animal.getAnimalName() +
+                    " ID: " + animal.getAnimalID() +
+                    " Species: " + animal.getClass().getSimpleName() +
+                    " Age: " + animal.getAge() +
+                    " Sex: " + animal.getSex() +
+                    " Color: " + animal.getAnimalColor() +
+                    " Weight: " + animal.getWeight() + " lbs" +
+                    " Birthdate: " + animal.getAnimalBirthday() +
+                    " Origin: " + animal.getAnimalOrigin());
         }
-        System.out.println("----------------------------------------");
+        System.out.println("=================================================================================");
     }
 }

@@ -70,6 +70,7 @@ public class Utilities {
                 line = line.trim();  // Trim any leading or trailing spaces
 
                 // Check for the species names and assign the appropriate list
+                //puts the names in the appropraite list
                 if (line.equals("Hyena Names:")) {
                     currentList = hyenaNameList;
                 } else if (line.equals("Lion Names:")) {

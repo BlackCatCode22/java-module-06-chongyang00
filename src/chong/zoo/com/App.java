@@ -1,4 +1,4 @@
-// Chong Yang  10/3/24
+// Chong Yang
 // zooVersion01.java
 //
 
@@ -13,11 +13,12 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Welcome to my Zoo Program!");
 
-        // Create the animal name lists
+        // creates the animal name lists
         String filePath = "animalNames.txt";
+        //reads and creates a list from the animalNames.txt
         AnimalNameListsWrapper animalLists = Utilities.createAnimalNameLists(filePath);
 
-        // Initialize the habitats
+        // Initialize the habitats for the animals
         Habitat hyenaHabitat = new Habitat("Hyena Habitat");
         Habitat lionHabitat = new Habitat("Lion Habitat");
         Habitat tigerHabitat = new Habitat("Tiger Habitat");
@@ -54,7 +55,7 @@ public class App {
 
                 if (animalSpecies.equals("hyena")) {
                     String hyenaName = animalLists.getHyenaNameList().get(hyenaNameIndex++);
-                    String hyenaID = "Hy" + String.format("%02d", hyenaIDCounter++);
+                    String hyenaID = "Hy" + String.format("%02d", hyenaIDCounter++); //keeps tracks and adds animal counter
                     Hyena hyena = new Hyena(animalSex, animalAge, Integer.parseInt(animalWeight), hyenaName, hyenaID, birthDate, animalColor, animalOrigin01 + animalOrigin02);
 
                     // Add the hyena to the hyena habitat
@@ -93,17 +94,23 @@ public class App {
                 ex.printStackTrace();
             }
         }
+;
+       // Prints animals in their habitat
 
-        // Prints animals in their habitat
         hyenaHabitat.displayAnimals();
         lionHabitat.displayAnimals();
         tigerHabitat.displayAnimals();
         bearHabitat.displayAnimals();
 
-        System.out.println("\nTotal number of animals in the zoo:");
+        //prints out the total numbers of animal
+
+        System.out.println("\nTotal number of animals in the zoo: " + Animal.numOfAnimal);
         System.out.println("Hyenas: " + hyenaHabitat.animals.size());
         System.out.println("Lions: " + lionHabitat.animals.size());
         System.out.println("Tigers: " + tigerHabitat.animals.size());
         System.out.println("Bears: " + bearHabitat.animals.size());
+
+
+
     }
 }
